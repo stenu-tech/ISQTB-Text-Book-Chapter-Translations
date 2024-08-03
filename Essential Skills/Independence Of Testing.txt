@@ -1,0 +1,11 @@
+A degree of independece makes the tester more effective at finding defects due to differences between the author and the tester cognitive biases.
+
+Independence is not however a replacement for familarity. Developers can find defects themselves.
+
+Work products can be tested by their author (no independce), by the author's peers from the same team (some independence) or by testers from outside the author's team but withing the organization (high independence), or by testers from outside the organization (very high indepdence).
+
+For most projects, it is usually best to carry out testing with multiple levels of indepdence (e.g. developers performing component and component integration testing, test team performing system and system integration testing and business representatives performing acceptance testing).
+
+The main benefit of independece of testing is that independent testers are likely to recognize different kinds of failures and defects compared to developers because of their different backgrounds, technical perspectives, and biases. Moreover, an independent tester can verify, challenge, or disprove assumptions made by stakeholders during specification and implementation of the system.
+
+However, there are also some drawbacks. Indepenent testes may be isolated from the development team, which may lead to a lack of collaboration, communication problems, or an adversarial relationship with the development team. Developers may lose a sense of responsibility for quality. Independent testers may be seen as a bottleneck or be blamed for delays in release.
