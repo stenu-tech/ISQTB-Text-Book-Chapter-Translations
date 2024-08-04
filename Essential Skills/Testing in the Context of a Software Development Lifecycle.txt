@@ -1,0 +1,49 @@
+* Impact of the Software Development Lifecycle on Testing
+
+Testing must be adapted to the SDLC to succeed.
+
+Scope and timing of test activities e.g test levels and test types
+Level of detail of test documentation
+
+Choice of test techniques and test approach
+Extent of test automation
+Role and responsibilities of a tester
+
+In sequential development models, in the initial phases testers typically participate in requirement reviews, test analysis and test design.
+
+The executable code is usually created in the later phaes, so typically dynamic testing cannot be performed early in the SDLC.
+
+In some iterative and incremental models, it is assumed that each iteration delivers a working prototype or product increment. This implies that in each iteration both static and dynamic testing may be performed at all test levels.
+Frequent delivery of increments requires fast feedback and extensive regression testing.
+
+Agile software development assumes that change may occur throughout the project. Therefore lightweight work product documentation and extensive test automation to make regression testing easier are favored in agile projects.
+
+Also, most of the manual testing tends to be done using experience-based test techniques that do not require extensive prior test analysis and design.
+
+Software Development Lifecycle and Good Testing Practices
+
+For every software development activity, there is a corresponding test activity, so that all development activities are subject to quality control.
+
+Different test level have specific and different test objectives, which allows for testing to be appropriately comprehensive while avoiding redundancy.
+
+Test analysis and design for a given test level begins during the corresponding development phase of the SDLC, so that testing can adhere to the principle of early testing.
+Testers are involved in reviewing work products as soon as drafts of this documentation are available, so that this earlier testing and defect detection can support the shift-left strategy.
+
+* Testing as a Driver for Software Development
+
+TDD, ATDD, BDD are similar development approaches, where tests are defined as a means of directing development. Each of these approaches implements the principle of early testing and follows a shift-left approach, since the tests are defined before the code is written. They support an iterative development model. These approaches are characterized as follows:
+
+Test-Driven Development (TDD):
+Directs the coding through test cases (instead of extensive software design)
+Tests are written first, then the code is written to satisfy the tests and then the tests and code are refactored.
+
+Acceptance Test-Driven Development (ATDD):
+
+Derives tests from acceptance criteria as part of the system design process.
+Tests are written before the part of the application is developed to satisfy the tests
+
+Behaviour-Driven Development (BDD):
+Expresses the desired behavior of an application with test cases written in a simple form of natural language, which is easy to understand by stakeholders - usually using the Given/When/Then format
+
+Test cases are then automatically translated into executable tests
+For all the above approaches, tests may persist as automated tests to ensure the code quality in future adaptions / refactoring.
