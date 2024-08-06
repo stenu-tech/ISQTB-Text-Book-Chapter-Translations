@@ -47,12 +47,43 @@ QA is a process-oriented, preventive approach that focuses on the implementation
 
 Test results are used by QA and QC. In QC they are used to fix defect, while in QA they provide feedback on how well the development and test processes are performing.
 
+
 1.3 Testing Principles
 
 A number of testing principles offering general guidelines applicable to all testing have been suggested over the years. This syllabus describes seven such principles.
 
 1. Testing shows the presence, not the absence of defects. Testing can show that defects are present in the test object, but cannot prove that there are no defects. Testing reduces the probability of defects remaining undiscovered in the test object, but even if no defects are found, testing cannot prove test object correctness.
-
 2. Exhaustive testing is impossible. Testing everything is not feasible except in trivial cases. Rather than attempting to test exhaustively, test techniques, test case prioritization, and risk-based testing should be used to focus test efforts.
-
 3. Early testing saves time and money.
+4. Defects cluster together. A small number of system components usually contain most of he defects discovered or are responsible for most of the operational failures. This phenomenon is an illustration of the Pareto principle. Predicted defect clusters, and actual defect clusters osberved during testing or in operation, are an important input for risk-based testing.
+5. Tests wear out. If the same tests are repeated many times, they become increasingly ineffective in detecting new defects. To overcome this effect, existing tests and test data may need to be modified, and new tests may need to be written. However, in some cases, repeating the same tests can have a beneficial outcome, e.g. in automated regression testing.
+6. Testing is context depedent. There is no single universally applicable approach to testing. Testing is done differently in different contexts.
+7. Absence-of-defects fallacy. It is a fallacy to expect that software verification will ensure the success of a system. Thoroughly testing all the specified requirements and fixing all the defects found could still produce a system that does not fulfill the users' needs and expectations, that does not help in achieving the customer's business goals and that is inferior comared to other competing system. In addition to verification, validation shoud also be carried out.
+
+1.4 Test Activities, Testware and Test Roles
+
+Testing is context dependent, but, at a high level, there are common set of test activities without which testing is less likely to achieve test objectives. These sets of test activities from a test process. The test process can be tailored to a given situation based on various factors. Which test activties are included in this test process, how they are implemented, and when they occur is normally decided as part of the test planning for the specific situation.
+
+The following sections describe the general aspects of this test process in terms of test activities and tasks, the impact of context, testware, traceability between the test basis and testware, and testing roles.
+
+1.4.1 Test Activities and tasks
+A test process usually consists of the main groups of activities described below. Although many of these activities may appear to follow a logical sequence, they are often implemented iteratively or in parallel. These testing activities usually need to be tailored to the system and the project.
+
+Test planning consists of defining the test objectives and then selecting an approach that best achieves the objectives within the constraints imposed by the overall context.
+
+Test monitoring and control. Test monitoring involves the ongoing checking of all test activties and the comparison of actual progress against the plan. Test control involves taking the actions necessary to meet the objectives of testing.
+
+Test analysis includes analyzing the test basis to identify testable features and to define and prioritize associated test conditions, together with the related risks annd related levels. The test basis and the test objects are also evaluated to identify defects they may contain and to assess their testability.
+Test analysis is often supported by the use of test techniques. Test analysis answers the question "what to test?" in terms of measurable coverage criteria.
+Test design includes elaborating the test conditions into test cases and other testsware (e.g., test charters). This activity often involves the identification of coverage items, which serve as a guide to specify test case inputs. Test techniques can be used to support this activity. Test design also includes defining the test data requirements, designing the test environment and identifying any other required infrastructure and tools. Test design answers the question "how to test".
+
+Test implementation includes creating or acquiring the testware necessary for test execution(test data). Test cases can be organized into test procedures and are often assembled into test suites. Manual and automated test scripts are created. Test procedures are priotitized and arranged within a test execution schedule for efficient test execution. The test environment is built and verified to be set up correctly.
+
+Test execution includes running includes running the tests in accordance with the test execution schedule (test runs). Test execution may be manual or automated. Test execution can take many forms, including continuous testing or pair testing sessions. Actual test results are compared with the expected results. The test results are logged. Anomalies are analyzed to identify their likely causes. This analysis allows us to report the anomalies based on the failures observed.
+
+Test completion activities usually occur at project milestones (e.g. release, end of iteration, test level completion) for any unresolved defects, change request or product backlog items created. Any testware that may be useful in the future is identified and archived or handed over to the appropriate teams. The test environment is shut down to an agreed state. The test activities are naalyzed to identify lessons learned and improvements for future iterations, releases or projects. A test completion report is created and communicated to the stakeholders.
+
+
+
+
+1.2.3 Errors, Defects, Failures, and Root Causes
