@@ -1,0 +1,30 @@
+1.5.3 Independence of Testing
+
+A cetain degree of indepdence makes the tester more effective at finding defects due to differences between the author's and the testers's cognitive biases. Indepedence is not, however, a replacement for familiarity, e.g. developers can efficiently find many defects in their own code.
+
+Work products can be tested by their author (no independence), by the author's peers from the same team (some independence), by testers from outside the author's team but within the organization (high indepedence), or by testers from outside the organization (very high independence). For most projects, it is usually best to carry out testing with multiple levels of independence (e.g. developers performing component and component integration testing, test team performing system and system integraton testing, and business representatives performing acceptance testing).
+
+The main benefit of independence of testing is independent testers are likely to recognize different kinds of failures and defects compared to developers because of their different backgrounds, technical perspectives and biases. Moreover, an independant tester can verify, challenge, or disprove assumptions made by stakeholders during specification and implementation of the system.
+
+However, there are also some drawbacks. Indepedent testers may be isolated from the development team, which may lead to a lack of collaboration, communication problems, or an adversarial relationship with the development team. Developers may lose a sense of responsibility for quality. Indepedent testers may be seen as a bottleneck or be blamed for delays in release.
+
+2.1 Testing in the context of a software Development Lifecycle
+
+A software development lifecycle (SDLC) is an abstract, high-level representation of the software development process. A SDLC model defines how different development phases and types of activities performed within this porcess related to each other, both logically and chronologically. Examples of SDLC models include: sequential development models (e.g. waterfall model, V-model), iterative development models (e.g. spiral model, prototyping), and incremental development models (e.g. Unified Process).
+
+Some activities within software development processes can also be described by more detailed software development methods and Agile practices. Examples include: acceptance test-driven development (ATDD), behavior-driven development (BDD), domain-driven design (DDD), extreme programming (XD), feature-driven development (FDD), Kanban, Lean, Scrum, and test-driven development (TDD).
+
+2.1.1 Impact of the Software Development Lifecycle on Testing
+
+Testing must be adapted to the SDLC to succeed. The choice of the SDLC impacts on the:
+1. Scope and timing of test activities (e.g. test levels and test types)
+Level of detail of test documentation
+Choice of test techniques and test approach
+Extent of test automation
+Role and responsibilities of tester
+
+In sequential development models, in the initial phases testers typically participate in requirement reviews, test analysis, and test design. The executable code is usually created in the later phases, so typically dynamic testing cannot be performed early in the SDLC.
+
+In some iterative and incremental development models, it is assumed that each iteration delivers a working prototype or product increment. This implies that in eac iteration both static and dynamic testing may be performed at all test levels. Frequent delivery of increments requires fast feedback and extensive regression testing.
+Agile software development assumes that change may occur throughout the project. Therefore, lightweight work product documentation and extensive test automation to make regression testing easier are favored in agile projects. Also, most of the manual testing tends to be done using experience-based test techniques that do not require extensive prior test analysis and design.
+
