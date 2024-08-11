@@ -1,0 +1,40 @@
+Fundamentals of Testing
+What is Testing?
+Test Objectives
+Testing and Debugging
+
+Why is Testing Necessary?
+Testing's Contributions to Success
+Testing and Quality Assurance (QA)
+Errors, Defects, Failures, and Root Causes
+Testing Principles
+Test Activities, Testware and Test Roles
+Test Activities and Tasks
+Test Process in Context
+Testware
+Traceability between the Test Basis and Testware
+Roles in Testing
+Essential Skills and Good Practices in Testing
+Generic Skills Required for Testing
+Whole Team Approach
+Indepedence of Testing
+Testing Throughout the Software Development Lifecycle
+Testing in the context of a Software Development Lifecycle
+Software Development Lifecycle and Good Testing Practices
+Testing as a Driver for Software Development
+DevOps and Testing
+Shift-Left Approach
+Retrospectives and Process Improvement
+Test Levels and Test Types
+Test Levels
+Test Types
+Confirmation Testing and Regression Testing
+Maintenance Testing
+Static Testing
+Static Testing Basics
+Work Products Examinable by Static Testing
+Valuable of Static Testing
+Differences between Static Testing and Dynamic Testiong
+Feedback and Review Process
+
+3.2
