@@ -1,0 +1,64 @@
+4.2.4 State Transition Testing
+
+A state transition diagram models the behavior of a system by showing its possible states and valid state transitions. A transition is initated by an event, which may be additionally qualified by a guard condition.
+
+The transitions are assumed to be instantaneous and may sometimes result in the software taking action.
+
+The common transition are assumed to be instantaneous and may sometimes result in the softwarer taking action.
+
+The common transition labelling syntax is as follows: "event [guard condition] / action". Guard conditions and actions can be omitted if they do not exist or are irrelevant for the tester.
+
+A state table is a model equivalent to a state transition diagram. Its rows represent states, and its columns represent events (together with guard conditions if they exist). Table entries (cells) represent transitions, and contain the target state, as well as the resulting actions, if defined. In contrast to the state transition diagram, the state table explicitly shows invalid transitions, which are represented by empty cells.
+
+A test case based on a state transition diagram or state table is usually represented as a sequence of events, which results in a sequence of state changes (and actions, if needed). One test case may, and usually will, cover several transitions between states.
+
+There exist many coverage criteria for state transition testing. This syllabus discusses three of them.
+
+In all states coverage, the coverage items are the states. To achieve 100% all states coverage, test cases must ensure that all the states are visited. Coverage is measured as the number of visited states divided by the total number of states, and is expressed as a percentage.
+
+In valid transition coverage (also called 0-switch coverage), the coverage items are single items are single valid transitions. To achieve 100% valid transitions coverage, test cases must exercise all the valid transitions. Coverage is measured as the number of exercised valid transitions divided by the toal number of valid transitions, and is expressed as a percentage.
+
+In all transitions coverage, the coverage items are all the transitions shown in a state table. To achieve 100% valid transitions coverage, test cases must exercise all the valid transitions. Coverage is measured as the number of exercised valid transitions divided by the total number of valid transitions, and is expressed as a percentage.
+
+In all transitions coverage, the coverage items are all the transitions shown in a state table. To achieve 100% all transitions coverage, test cases must exercise all the valid transitions and attempt to execute invalid transitions. Testing only one invalid transition in a single test case helps to avoid fault masking, i.e., a situation in which one defects prevents the detection of another. Coverage is measured as the number of valid and invalid transitions exervcised or attempted to be covered by executed test cases, divided by the total number of valid and invalid transitions, and is expressed as a percentage.
+
+All states coverage is weaker than valid transitions coverage, because it can typically be achieved without exercising all the transitions. Valid transitions coverage is the most widely used coverage criterion. Achieving full valid transitions coverage guarantees full all states coverage. Achieving full all transitions coverage guarantees both full all states coverage and full valid transitions coverage and should be a minimum requirement for mission and safety-critical software.
+
+4.3.2 Branch Testing and Branch Coverage
+
+A branch is a transfer of control between two nodes in the control flow graph., which shows the possible sequences in which source code statements are executed in the test object. Each transfer of control can be either unconditional (i.e. straight-line code) or conditional (i.e., a decision outcome).
+
+In branch testing the coverage items are branches and the aim is to design test cases to exercise branches in the code until an acceptable level of coverage is achieved. Coverage is measured as the number of branches exercised by the test cases divided by the total number of branches, and is expressed as a percentage.
+
+When 100% branch coverage is achieved, all branches in the code, unconditional and contional, are exercised by test cases. Conditional branches typically correspond to a true or false outcome from an "if...then" decision, an outcome from a switch/case statement, or a decision to continue in a loop.
+However, exercising a branch with a test case will not detect defects in all cases. For example, it may not detect defects requiring the execution of a specific path in a code.
+
+Branch coverage subsumes statement coverage. This means that any set of test cases achieving 100% branch coverage also achieves 100% statement coverage (but not vice versa).
+
+4.5.1 Collaborative User Story Writing
+
+A user story represents a feature that will be a valuable to either a user or purchaser of a system or software. User stories have three critical aspects called together the "3 C's".
+Card - the medium describing a user story (e.g., an index card, an entry in an electronic board)
+Conversation - explains how the software will be used (can be documented or verbal)
+Confirmation - the acceptance criteria
+
+The most common format for a user story is "as a [role], I want [goal to be accomplished], so that I can [resulting business value for the role]", followed by the acceptance criteria.
+
+Collaborative authorship of the user story can use techniques such as brainstorming and mind mapping.  The collaboration allows the team to obtain a shared vision of what should be delived, by taking into account three perspectives: business, development and testing.
+
+Good user stories sghould be: Independent, negotiable, valuable, estimable, small and testable (INVEST). If a stakeholder does not know how to test a user story, this may indicate that the user story is not clear enough, or that it does not reflect something valuable to them, or that the stakeholder just needs help in testing.
+
+4.5.2 Acceptance Criteria
+
+Acceptance criteria for a user story are the conditions that an implementation of the user story must meet to be accepted by stakeholders. From this persepctive, acceptance criteria may be viewed as the test conditions that should be exercised by the tests. Acceptance criteria are usually a result of the conversation.
+
+Acceptance criteria are used to:
+Define the scope of the user story
+Reach consensus among the stakeholders
+Describe both positive and negative scenarios
+Serve as a basis for the user story acceptance testing
+Allow accurate planning and estimation
+There are several ways to write acceptance criteria for a user story. The two most common formats are:
+Scenario-oriented (e.g., Given/When/Then) format used in BDD
+Rule-oriented (e.g., bullet point verification list, or tabulated form of input-output mapping
+Most acceptance criteria can be documented in one of the these two formats. However, the team may use another, custom format, as long as the acceptance criteria are well-defined and unambiguous.
