@@ -1,0 +1,59 @@
+Acceptance Test-driven Development (ATDD)
+
+ATDD is a test-first approach. Test cases are created prior to implementing the user story. The test cases are created by team members. Incompleteness, ambiguities, or defects in the user story are resolved during this process. The next step is to create the test cases. This can be done by the team as a whole or by the tester individually. The test cases are based on the acceptance criteria and can be seen as examples of how the software works. This will help the team implement the user story correctly.
+
+Since examples and tests are the same, these terms are often used interchangeably. During the test design the test techniques described may be applied. (4.2, 4.3, 4.4)
+
+Typically, the first test cases are positive, confirming the correct behavior without exceptions or error conditions, and comprising the sequence of activies executed if everything goes as expected. After the positive test cases are done, the team should perform negative testing. Fianlly the team should cover non-functional quality characteristic as well (e.g., performance efficiency, usability). Test cases should be expressed in a way that is understandable for the stakeholders. Typically, test cases contain sentences in natural language involving the necessary preconditions (if any), the inputs and the postconditions.
+
+The test cases must cover all the characteristics of the user story and should not go beyond the story. However, the acceptance criteria may detail some of the issues described in the user story. In addition, no two test cases should describe the same charactistics of the user story.
+
+When captures in a format supported by a test automation framework, the developers can automate the test cases by writing the supporting code as they implement the feature described by a user story. The acceptance test then become executable requirements.
+
+5.1.1 Purpose and Content of a Test Plan
+A test plan describes the objectives, resources and processes for a test project. A test plan:
+
+Documents the means and schedule for achieving test objectives
+Helps to ensure that the performed test activities will meet the established criteria
+Serves as a means of communication with team members and other stakeholders
+Demonstrates that testing will adhere to the existing test policy and test strategy (or explains why the testing will deviate from them)
+Test planning guides the testers' thinking and forces the testers to confront the future challenges related to risks, schedules, people, tools, costs, effort, etc. The process of preparing a test plan is a useful way to think through the efforts needed to achieve the test project objectives.
+The typical content of a test plan includes:
+
+Context of testing (e.g., scope, test objectives, contraints, test basis)
+Assumptions and constraints of the test project
+Stakeholders (e.g., roles, responsibilities, relevance to testing, hiring and training needs)
+Communication (e.g., forms and frequency of communication, documnetation templates)
+Risk register (e.g, product risks, project risks)
+Test approach (e.g., test levels, test types, test techniques, test deliverables, entry criteria and exit criteria, independence of testing, metrics to be collected, test data requirements, test environment requirements, deviations from the organizational test policy and test strategy)
+Budget and schedule
+
+More details about the test plan and its content can be found in the ISO/IEC/IEEE 29119-3 standard.
+
+5.1.2 Tester's Contribution to Iteration and Release Planning
+In iterative SDLCs, typically two kinds of planning occur: release planning and iteration planning.
+
+Release planning looks ahead to the release of a product, defines and re-defines the product backlog, and may involve refining larger user stories into a set of smaller user stories. It also serves as the basis for the test approach and test plan across all iterations. Testers involved in release planning participate in writing testable user stories and acceptance criteria 4.5, participate in project and quality risk analyses 5.2, esitamte test effort associated with user stories 5.1.4, determine the test approach, and plan the testing for the release.
+
+Iteration planning looks ahead to the end of a single iteration and is concerned with the iteration backlog. Testers involved in iteration planning participate in the detailed risk analysis of user stories, determine the testability of user stories, break down user stories into tasks (particularly testing tasks), estimate test effort for all testing tasks , and identify and refine functional and non-functional aspects of the test object.
+
+5.1.3
+
+Entry Criteria and Exit Criteria
+
+Entry crtiteria define the preconditions for undertaking a given activity. If entry criteria are not met, it is likely that the activity will prove to be more difficult, time-consuming, costly, and riskier. Exit criteria define what must be achieved in order to declare an activity completed. Entry criteria and exit criteria should be defined for each test level, and will differ based on the test objectives.
+
+Typical entry criteria include: availability of resources, (e.g., people, tools, environments, test data, budget, time), availability of testware (e.g, test basis, testable requirements, user stories, test cases), and initial quality level of a test object (e.g, all smoke test have passed).
+Typical exit criteria include: measures of thoroughness (e.g., achieved level of coverage, number of unresolved defects, defect density, number of failed test cases), and completion criteria (e.g, planned test have been executed, static testing has been performed, all defects found are reported, all regression tests are automated).
+
+Running out of time or budget cal also be viewed as valid exit criteria. Even without other exit criteria being satisfied, it can be acceptable to end testing such circumstances, if the stakeholders have reviewed and accepted the risk to go live without further testing.
+
+IN agile software development, exit criteria are often called Definitions of Done, defining the team's objective metrics for a releasable item. Entry criteria that a user story must fulfill to start the development and/or testing activities are called definition of ready.
+
+5.1.4 Estimation Techniques
+
+Test effort estimation involves predicting the amount of test-related work needed to meet the objectives of a test project. It is important to make it clear to the stakeholders that the esitmate is based on a number of assumptions and is always subject to estimation error. Estimation for small tasks is usually more accurate than for the large ones. Therefore, when estimating a large task, it can be decomposed into a set of of smaller tasks which then in turn can be estimated.
+
+In this syllabus, the following four estimation techniques are described.
+
+Estimation based on ratios. In this metrics-based technique, figures are collected from previous projects within the organization, which makes it possible to derive "standard" ratios for similar projects.
