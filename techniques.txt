@@ -1,0 +1,181 @@
+To illustrate the four test design techniques (Equivalence Partitioning, Boundary Value Analysis, Decision Table Testing, and State Transition Testing) with examples in a tabular format, let's create a table that includes a scenario, the technique applied, and the resulting test cases.
+
+Technique	Scenario	Examples of Test Cases
+Equivalence Partitioning (EP)	A system requires users to input a number between 1 and 100.	- Valid Partition: Test with numbers within the range, e.g., 50 (valid).
+- Invalid Partitions: Test with numbers outside the range, e.g., 0, 101 (invalid).
+Boundary Value Analysis (BVA)	A system requires users to input a number between 1 and 100.	- On Boundary: Test with 1 and 100 (valid).
+- Just Outside Boundary: Test with 0 and 101 (invalid).
+Decision Table Testing	A system offers a discount based on customer type (regular or premium) and order value (above or below $100).	- Condition 1: Regular customer + order value below $100 = No discount.
+- Condition 2: Regular customer + order value above $100 = 5% discount.
+- Condition 3: Premium customer + order value below $100 = 10% discount.
+- Condition 4: Premium customer + order value above $100 = 15% discount.
+State Transition Testing	A login system with states: "logged out," "logged in," and "locked out."	- Event 1: Enter correct password from "logged out" state = "logged in" state.
+- Event 2: Enter incorrect password three times from "logged out" state = "locked out" state.
+Explanation:
+Equivalence Partitioning (EP) Example:
+
+Scenario: Input field accepts numbers between 1 and 100.
+Test Cases:
+Valid Partition: A representative value from the valid range (e.g., 50).
+Invalid Partitions: Values from outside the range (e.g., 0, 101).
+Boundary Value Analysis (BVA) Example:
+
+Scenario: Input field accepts numbers between 1 and 100.
+Test Cases:
+On Boundary: Test values right at the boundaries (e.g., 1, 100).
+Just Outside Boundary: Test values just outside the boundaries (e.g., 0, 101).
+Decision Table Testing Example:
+
+Scenario: Discounts based on customer type and order value.
+Test Cases:
+Regular customer + order value below $100 = No discount.
+Regular customer + order value above $100 = 5% discount.
+Premium customer + order value below $100 = 10% discount.
+Premium customer + order value above $100 = 15% discount.
+State Transition Testing Example:
+
+Scenario: A login system with different states.
+Test Cases:
+Event 1: Correct password leads from "logged out" to "logged in".
+Event 2: Incorrect password three times leads from "logged out" to "locked out".
+These examples provide a clear understanding of how each test design technique can be applied in practice.
+
+
+
+
+
+You said:
+
+Technique	Scenario	Examples of Test Cases
+Equivalence Partitioning (EP)	A system requires users to input a number between 1 and 100.	- Valid Partition: Test with numbers within the range, e.g., 50 (valid).
+- Invalid Partitions: Test with numbers outside the range, e.g., 0, 101 (invalid).
+Boundary Value Analysis (BVA)	A system requires users to input a number between 1 and 100.	- On Boundary: Test with 1 and 100 (valid).
+- Just Outside Boundary: Test with 0 and 101 (invalid).
+Decision Table Testing	A system offers a discount based on customer type (regular or premium) and order value (above or below $100).	- Condition 1: Regular customer + order value below $100 = No discount.
+- Condition 2: Regular customer + order value above $100 = 5% discount.
+- Condition 3: Premium customer + order value below $100 = 10% discount.
+- Condition 4: Premium customer + order value above $100 = 15% discount.
+State Transition Testing	A login system with states: "logged out," "logged in," and "locked out."	- Event 1: Enter correct password from "logged out" state = "logged in" state.
+- Event 2: Enter incorrect password three times from "logged out" state = "locked out" state.
+
+corner cases for the techniques
+ChatGPT said:
+ChatGPT
+Here are corner cases for each of the test design techniques, which are essential for identifying edge scenarios that might otherwise be overlooked during testing:
+
+1. Equivalence Partitioning (EP) Corner Cases
+Scenario: A system requires users to input a number between 1 and 100.
+
+Corner Cases:
+
+Empty Input: What happens if no input is provided?
+Non-numeric Input: What happens if input like letters or special characters is provided (e.g., "abc", "!@#")?
+Floating-point Numbers: What happens if the input is a floating-point number (e.g., 50.5)?
+Negative Numbers: Beyond just invalid ranges, consider negative inputs which might not be immediately obvious (e.g., -1).
+2. Boundary Value Analysis (BVA) Corner Cases
+Scenario: A system requires users to input a number between 1 and 100.
+
+Corner Cases:
+
+Exactly on Boundary: What happens if the input is precisely at the boundary values (e.g., 1 and 100)?
+Near Boundary with Unexpected Format: What happens with inputs near the boundaries but in unexpected formats, such as "1.0" or "100.0"?
+Zero and Negative Zero: Testing with zero and negative zero (-0) to see how they are handled, if applicable.
+Maximum and Minimum Numeric Limits: What happens if the input is extremely large or small (e.g., Integer.MAX_VALUE, Integer.MIN_VALUE)?
+3. Decision Table Testing Corner Cases
+Scenario: A system offers a discount based on customer type (regular or premium) and order value (above or below $100).
+
+Corner Cases:
+
+Boundary Value Between Conditions: Testing right at the $100 boundary (e.g., $99.99 and $100.01) to ensure correct discount application.
+Unknown or New Customer Type: What happens if an unknown customer type is entered?
+Exact Match for Discount Triggers: For example, if the discount applies at exactly $100, ensure this case is tested separately.
+Multiple Conditions Met: What if a scenario could potentially match more than one condition, such as customer type "premium" with an order value at a different threshold?
+4. State Transition Testing Corner Cases
+Scenario: A login system with states: "logged out," "logged in," and "locked out."
+
+Corner Cases:
+
+Rapid State Changes: What happens if a user quickly tries to change states (e.g., quickly logging out and then attempting to log back in)?
+Simultaneous or Concurrent Events: What if two conflicting actions occur almost simultaneously, like entering a correct password while the system processes an account lock?
+Error Handling During Transitions: How does the system behave if an error occurs during a transition, such as a server crash during login?
+Unexpected State Input: Testing what happens when an input that doesn’t correspond to any known state is used.
+Summary of Corner Cases in Tabular Form
+Technique	Scenario	Corner Cases
+Equivalence Partitioning (EP)	Input number between 1 and 100	- Empty input
+- Non-numeric input (e.g., "abc")
+- Floating-point numbers (e.g., 50.5)
+- Negative numbers (e.g., -1)
+Boundary Value Analysis (BVA)	Input number between 1 and 100	- Exactly on boundary (e.g., 1 and 100)
+- Near boundary with unexpected format (e.g., "1.0", "100.0")
+- Zero and negative zero
+- Maximum and minimum numeric limits
+Decision Table Testing	Discounts based on customer type and order value	- Boundary value between conditions (e.g., $99.99, $100.01)
+- Unknown or new customer type
+- Exact match for discount triggers (e.g., exactly $100)
+- Multiple conditions met
+State Transition Testing	Login system states: "logged out," "logged in," "locked out"	- Rapid state changes
+- Simultaneous or concurrent events
+- Error handling during transitions
+- Unexpected state input
+These corner cases are critical for ensuring comprehensive testing by capturing unusual or edge conditions that might otherwise be missed, helping ensure the robustness of the software under all possible scenarios.
+
+
+
+
+
+You said:
+
+Technique	Scenario	Corner Cases
+Equivalence Partitioning (EP)	Input number between 1 and 100	- Empty input
+- Non-numeric input (e.g., "abc")
+- Floating-point numbers (e.g., 50.5)
+- Negative numbers (e.g., -1)
+Boundary Value Analysis (BVA)	Input number between 1 and 100	- Exactly on boundary (e.g., 1 and 100)
+- Near boundary with unexpected format (e.g., "1.0", "100.0")
+- Zero and negative zero
+- Maximum and minimum numeric limits
+Decision Table Testing	Discounts based on customer type and order value	- Boundary value between conditions (e.g., $99.99, $100.01)
+- Unknown or new customer type
+- Exact match for discount triggers (e.g., exactly $100)
+- Multiple conditions met
+State Transition Testing	Login system states: "logged out," "logged in," "locked out"	- Rapid state changes
+- Simultaneous or concurrent events
+- Error handling during transitions
+- Unexpected state input
+
+make it so that i understand as a 7 y/o
+ChatGPT said:
+ChatGPT
+Here’s a simplified explanation of the four testing techniques and their tricky corner cases, explained as if you were 7 years old:
+
+Technique	Scenario	Corner Cases
+Equivalence Partitioning (EP)	You need to pick a number between 1 and 100.	- No Number: What if you don’t pick any number at all?
+- Not a Number: What if you choose something that isn’t a number, like the word "apple"?
+- Decimal Numbers: What if you pick a number with a dot, like 50.5?
+- Negative Numbers: What if you pick a number that is less than 0, like -1?
+Boundary Value Analysis (BVA)	You need to pick a number between 1 and 100.	- At the Edge: What if you pick the smallest number, 1, or the biggest number, 100?
+- Weird Format: What if you pick 1.0 or 100.0 instead of just 1 or 100?
+- Zero or Negative Zero: What if you pick zero or even say there’s a "negative zero"?
+- Super Big or Small Numbers: What if you pick a really huge or really tiny number?
+Decision Table Testing	A store gives discounts based on what type of customer you are and how much you buy.	- Right at the Line: What if you buy something that costs exactly $100 or almost $100, like $99.99?
+- Unknown Customer: What if you are a customer type the store doesn’t know about?
+- Exact Discount Amount: What happens if your total is exactly at the discount point, like $100?
+- Multiple Discounts: What if you qualify for more than one discount?
+State Transition Testing	You are trying to log into a game with different states like "logged out," "logged in," and "locked out."	- Fast Actions: What if you try to log in and log out really fast?
+- Doing Two Things at Once: What if you try to log in while someone else tries to log you out?
+- Errors in Between: What happens if the game crashes while you’re logging in?
+- Unknown Actions: What if you do something the game doesn’t expect?
+Simple Explanations for Each Technique:
+Equivalence Partitioning (EP):
+
+Think of it like picking a number from a box that should only have numbers between 1 and 100. Sometimes, there might be something weird in the box like "apple" or -1, which shouldn't be there!
+Boundary Value Analysis (BVA):
+
+This is like playing a game where you can only stand between two lines, numbered 1 and 100. You need to make sure that you don’t accidentally step outside these lines or use a trick like standing on a decimal point!
+Decision Table Testing:
+
+Imagine you are in a store where you get different discounts based on what type of customer you are and how much you spend. Sometimes, it gets tricky right at the edge of getting a discount or when the store doesn’t know what type of customer you are.
+State Transition Testing:
+
+Think of it like trying to get into a room with different keys ("logged in," "logged out," "locked out"). You need to check what happens if you use the keys super fast, or someone else tries to lock you out while you’re trying to get in.
+By thinking about these tricky situations, or "corner cases," you can make sure everything works just right, even when things get a little weird or unexpected!
